@@ -13,9 +13,13 @@ body{
     background-color: bisque;
     margin-top: 50px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
 }
 .new-grid{
-    display: flex;
     width: calc(100% / 10);
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
