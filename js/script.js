@@ -20,31 +20,27 @@ function createNumber(usedNumbers){
     return randomNumber;
 }
 
-
-// * richiamo la funzione per genereare quadrati
-for (let index = 0; index < 100; index++) {
-
-    // ? RICHIAMO DELLA FUNZIONEPER GENERARE LE BOX
-    const newGridBox = createElement();
-
-    // ? RICHIAMO DELLA FUNZIONE PER GENERARE I NUMERI
+const button=document.getElementById('button');
+button.addEventListener('click', function(){
     
-    const gridNumber= createNumber(blackList);
-    newGridBox.innerHTML=gridNumber;
-    blackList.push(gridNumber);
+    // * richiamo la funzione per genereare quadrati
+    for (let index = 0; index < 100; index++) {
 
-    container.append(newGridBox);
+        // ? RICHIAMO DELLA FUNZIONEPER GENERARE LE BOX
+        const newGridBox = createElement();
 
-    newGridBox.addEventListener('click', function(){
-        newGridBox.classList.toggle('bg');
-        console.log(newGridBox.innerText);
-        });
-    
-}
-// const eachBox= document.querySelector('.box-container', '.new-grid');
+        // ? RICHIAMO DELLA FUNZIONE PER GENERARE I NUMERI
+        
+        const gridNumber= createNumber(blackList);
+        newGridBox.innerHTML=gridNumber;
+        blackList.push(gridNumber);
 
-//     eachBox.addEventListener('click', function(){
-//     newGridBox.classList.add('bg');
+        container.append(newGridBox);
 
-//     container.append(eachBox);
-//     });
+        newGridBox.addEventListener('click', function(){
+            newGridBox.classList.toggle('bg');
+            console.log(newGridBox.innerText);
+            });
+        
+    }
+});
