@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding-top: 40px;
+}
+
+.box-container{
+    width: 800px;
+    height: 800px;
+    background-color: bisque;
+    margin-top: 50px;
+    margin: 0 auto;
+}
+.new-grid{
+    display: flex;
+    width: calc(100% / 10);
+    border: 1px solid black;
+}
