@@ -20,15 +20,16 @@ function createNumber(usedNumbers){
     return randomNumber;
 }
 
+// ! il problema //
 const button=document.getElementById('button');
 button.addEventListener('click', function(){
     
     // * richiamo la funzione per genereare quadrati
     for (let index = 0; index < 100; index++) {
-
+        
         // ? RICHIAMO DELLA FUNZIONEPER GENERARE LE BOX
         const newGridBox = createElement();
-
+        newGridBox.innerHTML=null;
         // ? RICHIAMO DELLA FUNZIONE PER GENERARE I NUMERI
         
         const gridNumber= createNumber(blackList);
